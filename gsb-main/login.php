@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="./src/logo.ico">
+        <link rel="icon" type="image/x-icon" href="./src/gsb logo 2">
         <link rel="stylesheet" href="style.css">
         <title>Intranet GSB</title>
     </head>
@@ -32,20 +32,20 @@
                 if ($res["idRole"] == 2){
                     $_SESSION["idRole"]= 2;
                     $_SESSION["idUser"]= $res["IdVisiteur"];
-                    
+                    header("Location: gsb-main/gsb-main/comptable/index.php");
                     exit();
                 }
                 if ($res["idRole"] == 1){
                     $_SESSION["idRole"]= 1;
                     $_SESSION["idUser"]= $res["IdVisiteur"];
-                   
+                    header("Location: localhost/gsb-main/gsb-main/visiteur/index.php");
                     close($connexion,$res["IdVisiteur"]);
                     exit();
                 }
                 if ($res["idRole"] == 3){
                     $_SESSION["idRole"]= 3;
                     $_SESSION["idUser"]= $res["IdVisiteur"];
-                    
+                    header("Location: localhost/comptable/index.php");
                     close($connexion,$res["IdVisiteur"]);
                     exit();
                 }

@@ -1,15 +1,15 @@
 <?php
     
     if (!isset($_SESSION["idUser"])) {
-        header("");
+        header("Location:  gsb-main/gsb-main/index.php?erreur=Identifiant ou mot de passe incorrect");
     }
     else{
         if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
             NULL;
         } elseif ($_SESSION["idRole"] == 2) {
-            header("Location: https://gsb.lucas-lestiennes.fr/comptable");
+            header("Location: gsb-main/gsb-main/comptable/index.php");
         } else {
-            header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
+        header("Location: gsb-main/gsb-main/index.php?erreur=Identifiant ou mot de passe incorrect");
         }
     }
 ?>
@@ -17,7 +17,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link rel="icon" type="image/x-icon" href="../src/logo.ico">
+        <link rel="icon" type="image/x-icon" href="../src/gsblogo 2">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Intranet - Visiteurs médicaux</title>
         <link rel="stylesheet" href="./style.css">
