@@ -1,0 +1,146 @@
+/* Ré   initialiser les styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #a0e7cf, #2b4f9b);
+    color: #333;
+}
+
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+.navbar {
+    background-color: #F2A30F; /* Couleur de fond plus claire avec texture */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    border-bottom: 2px solid #731D55; /* Bordure basse pour séparation */
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.centered-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.right-aligned {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    gap: 20px;
+}
+
+.centered-links li a,
+.right-aligned li a {
+    color: #5a4e3d; /* Couleur sombre pour les liens */
+    text-decoration: none; /* Supprimer le soulignement */
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.7); /* Fond semi-transparent pour détacher les liens */
+    transition: background-color 0.3s ease;
+}
+
+.centered-links li a:hover,
+.right-aligned li a:hover {
+    background-color: rgba(255, 255, 255, 1); /* Changement de fond au survol */
+}
+
+.bouton_logoff {
+    background-color: #f86464;
+}
+
+.bouton_logoff:hover {
+    background-color: #FF0000;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.5;
+    color: #000000;
+}
+
+/* Pour le fomulaire */
+form {
+    width: 100%;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    background: #F2A30F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #2f87e5;
+}
+
+button:nth-of-type(2) {
+    background: #1d84f1;
+}
+
+button:nth-of-type(2):hover {
+    background: #007bff;
+}
