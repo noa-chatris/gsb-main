@@ -1,9 +1,9 @@
 <?php
-    session_start();
+    //session_start();
     function header_element($acceuil = ".", $saisie_frais = ".", $consultation_frais = ".", $logoff = "..", ){
         $comptable = "";
         if ($_SESSION["idRole"] == 3){
-            $comptable = "<li><a href=\"https://gsb.lucas-lestiennes.fr/comptable/\">Comptable</a></li>";
+            $comptable = "<li><a href=\"http://localhost/gsb-main/gsb-main/comptable\">Comptable</a></li>";
         }
         echo "
             <div class=\"header\">
@@ -13,7 +13,7 @@
             <nav class=\"navbar\">
                 <ul class=\"centered-links\">
                     <li><a href=\"$acceuil/\">Acceuil</a></li>
-                    <li><a href=\"$saisie_frais/saisie-frais\">Saisi de frais</a></li>
+                    <li><a href=\"$saisie_frais/saisie-frais\">Saisie de frais</a></li>
                     <li><a href=\"$consultation_frais/consultation-frais\">Consultation fiche de frais</a></li>
                 </ul>
                 <ul class=\"right-aligned\">

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <?php
-    include './connect.php';
     session_start();
     if (!isset($_SESSION["idUser"])) {
-        header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
+        header("Location: http://localhost/gsb-main/gsb-main/index.php?erreur=veuillez vous connecter");
     }
     else{
         if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
             NULL;
         } elseif ($_SESSION["idRole"] == 2) {
-            header("Location: https://gsb.lucas-lestiennes.fr/comptable");
+            header("Location: http://localhost/gsb-main/gsb-main/comptable");
         } else {
-            header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
+            header("Location: http://localhost/gsb-main/gsb-main/index.php?erreur=connecter vous");
         }
     }
 ?>

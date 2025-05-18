@@ -35,6 +35,7 @@ body{
     text-align: center;
     position: sticky;
     top: 0px;
+    }
 
 .navbar{
     z-index: 1;
