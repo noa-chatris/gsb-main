@@ -1,9 +1,12 @@
 <?php
+//cela permet de créer le header de la page
+//et de l'inclure dans les pages
+//cela permet de ne pas avoir à le réécrire à chaque fois
     function header_element($acceuil = ".", $suivi_paiment = ".", $validation_frais = ".", $logoff = "..", ){
         $visiteur = "";
-        if ($_SESSION["idRole"] == 3){
-            $visiteur = "<li><a href=\"https://localhost/gsb-ain/gsb-main/visiteur/index.php\">Visiteur</a></li>";
-        }
+            if ($_SESSION["idRole"] == 3){
+                $visiteur = "<li><a href=\"https://localhost/gsb-main/visiteur/index.php\">Visiteur</a></li>";
+            }
         echo "
             <div class=\"header\">
                 <h1>Intranet Comptable</h1>

@@ -32,6 +32,8 @@
                 <button type="submit" class="login">S'identifier </button>
                 <div class="footer"><span>Mot de passe perdu ?</span></div>
                 <?php
+                    // On démarre la session
+                    // On vérifie si l'utilisateur est déjà connecté
                     session_start();
                     $_SESSION["idRole"] = NULL;
                     $_SESSION["idUser"] = NULL;

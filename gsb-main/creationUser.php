@@ -22,6 +22,7 @@
     <?php
         function add()
         {
+            // j'y connecte la base de données
             include './connect.php';
             $username = htmlspecialchars($_POST['username']);
             $password = stripslashes($_POST['password']);

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <?php
-// Include the database connection file
+// j'y connecte la base de données
     include '../../connect.php';
-
+// je démarre la session
+    // je vérifie si l'utilisateur est connecté
     session_start();
     if (!isset($_SESSION["idUser"])) {
         header("Location: http://localhost/gsb-main/gsb-main/index.php?erreur=veuillez vous connecter");
     }
+    // je vérifie si l'utilisateur est un visiteur médical
+    // ou un comptable
     else{
         if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
             NULL;

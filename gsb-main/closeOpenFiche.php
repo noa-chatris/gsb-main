@@ -1,5 +1,6 @@
 <?php
-    
+    //ce script permet de fermer les fiches de frais ouvertes
+    //et de les mettre à l'état "cloturé"
     include './connect.php';
     function close($connexion,$idUser = NULL){
         $month = date('n');
