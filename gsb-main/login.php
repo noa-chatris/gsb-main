@@ -24,7 +24,7 @@
             include './closeOpenFiche.php';
             $login = htmlspecialchars($_POST['login']);
             $password = htmlspecialchars($_POST['password']);
-            $res = $connexion -> query("SELECT * FROM Visiteur WHERE nom = '$login' AND password = '$password'");
+            $res = $connexion -> query("SELECT * FROM visiteur WHERE login = '$login' AND password = '$password'");
             $res = $res -> fetch();
             if ($res){
                 $_SESSION["nom"] = $res["nom"];
@@ -32,20 +32,20 @@
                 if ($res["idRole"] == 2){
                     $_SESSION["idRole"]= 2;
                     $_SESSION["idUser"]= $res["IdVisiteur"];
-                    header("Location: gsb-main/gsb-main/comptable/index.php");
+                    header("Location: http://localhost/gsb-main/gsb-main/comptable/index.php");
                     exit();
                 }
                 if ($res["idRole"] == 1){
                     $_SESSION["idRole"]= 1;
                     $_SESSION["idUser"]= $res["IdVisiteur"];
-                    header("Location: localhost/gsb-main/gsb-main/visiteur/index.php");
+                    header("Location: http://localhost/gsb-main/gsb-main/visiteur/index.php");
                     close($connexion,$res["IdVisiteur"]);
                     exit();
                 }
                 if ($res["idRole"] == 3){
                     $_SESSION["idRole"]= 3;
                     $_SESSION["idUser"]= $res["IdVisiteur"];
-                    header("Location: localhost/comptable/index.php");
+                    header("Location: http://localhost/gsb-main/gsb-main/comptable/index.php");
                     close($connexion,$res["IdVisiteur"]);
                     exit();
                 }
@@ -56,8 +56,8 @@
                     return new Promise(resolve => setTimeout(resolve, ms));
                 }
                 async function relocate() {
-                    await sleep(1000);
-                    window.location.href = 'index.php?erreur=Identifiant ou mot de passe incorrect';
+                    await sleep(10000);
+                    window.location.href = './index.php ?erreur=Identifiant ou mot de passe incorrect';
                 }
                 relocate();
             </script>

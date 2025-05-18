@@ -1,23 +1,25 @@
 <?php
+    session_start();
     
     if (!isset($_SESSION["idUser"])) {
-        header("Location:  gsb-main/gsb-main/index.php?erreur=Identifiant ou mot de passe incorrect");
+        header("Location:  http://localhost/gsb-main/gsb-main/index.php?erreur=veuillez vous connecter");
+        exit();
     }
     else{
         if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
             NULL;
         } elseif ($_SESSION["idRole"] == 2) {
-            header("Location: gsb-main/gsb-main/comptable/index.php");
+            header("Location: http://localhost/gsb-main/gsb-main/comptable");
         } else {
-        header("Location: gsb-main/gsb-main/index.php?erreur=Identifiant ou mot de passe incorrect");
+        header("Location: http://localhost/gsb-main/gsb-main/index.php?erreur=veuiller vous connecter");
         }
     }
-?>
+?>  
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link rel="icon" type="image/x-icon" href="../src/gsblogo 2">
+        <link rel="icon" type="image/x-icon" href="../src/gsb logo 2">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Intranet - Visiteurs médicaux</title>
         <link rel="stylesheet" href="./style.css">
