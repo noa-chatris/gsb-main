@@ -8,7 +8,7 @@
             <div class=\"header\">
                 <h1>Intranet Comptable</h1>
             </div>
-            <img alt=\"Logo\" src='https://github.com/noa-chatris/gsb-main/blob/23dc6f461f7580030879ce477393c3bdc0f104c3/gsb-main/src/gsb%20logo%202.png'>
+            <img alt=\"Logo\" src='../../src/gsb logo 2.png'>
             <nav class=\"navbar\">
                 <ul class=\"centered-links\">
                     <br>

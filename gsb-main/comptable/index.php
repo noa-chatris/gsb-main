@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
     session_start();
-    include '../connect.php';
+    include __DIR__ . '/../connect.php';
     if (!isset($_SESSION["idUser"])) {
         header("Location: http://localhost/gsb-main/gsb-main/index.php?erreur=connecter vous");
     }
