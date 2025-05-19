@@ -28,7 +28,7 @@
             include './closeOpenFiche.php';
             $login = htmlspecialchars($_POST['login']);
             $password = htmlspecialchars($_POST['password']);
-            $res = $connexion -> query("SELECT * FROM visiteur WHERE login = '$login' AND password = '$password'");
+            $res = $connexion -> query("SELECT * FROM Visiteur WHERE login = '$login' AND password = '$password'");
             $res = $res -> fetch();
             // On vérifie si le mot de passe et le login sont corrects
             // Si oui, on redirige vers la page d'accueil selon son rôle
