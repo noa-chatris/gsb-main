@@ -30,7 +30,7 @@
         <h2>Suivre le paiement des fiches de frais</h2>
             <form>
                 <label>Numéro de fiche de frais</label>
-                <input type="text" required> <br>
+                <br> <input type="text" required> <br>
                 
                 <button type="submit">Vérifier l'état du paiement</button>
             </form>
