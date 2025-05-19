@@ -1,4 +1,7 @@
 <?php
+//cela permet de créer le header de la page
+//et de l'inclure dans les pages
+//cela permet de ne pas avoir à le réécrire à chaque fois
     //session_start();
     function header_element($acceuil = ".", $saisie_frais = ".", $consultation_frais = ".", $logoff = "..", ){
         $comptable = "";
