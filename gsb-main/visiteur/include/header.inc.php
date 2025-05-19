@@ -20,7 +20,7 @@
                     <li><a href=\"$consultation_frais/consultation-frais\">Consultation fiche de frais</a></li>
                 </ul>
                 <ul class=\"right-aligned\">
-                    <li><p><img src=\"../../src/gsb logo 2.png\" alt=\"GSB Logo 2\" style=\"display:block; margin-bottom:10px;\" /></p></li>
+                    <li><p></p></li>
                     <li><p>$_SESSION[nom] $_SESSION[prenom]</p></li>
                     $comptable
                     <li class=\"bouton_logoff\"><a href=\"$logoff/logoff.php\">Déconnection</a></li>
