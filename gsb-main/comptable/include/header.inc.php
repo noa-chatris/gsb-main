@@ -26,6 +26,6 @@
                 </ul>
             </nav>
            
-            ";//<img alt=\"Logo\" src='../../src/gsb logo 2.png'>
+            "; //<img alt=\"Logo\" src='../../src/gsb logo 2.png'>
     }
 ?>
