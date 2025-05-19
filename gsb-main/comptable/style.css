@@ -51,22 +51,12 @@ body {
     color: #cd9d5a; /* Couleur sombre pour les liens */
     text-decoration: none; /* Supprimer le soulignement */
     font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.7); /* Fond semi-transparent pour détacher les liens */
-    transition: background-color 0.3s ease;
 }
-
-
-.centered-links li a:hover,
-.right-aligned li a:hover {
-    background-color: rgba(255, 255, 255, 1); /* Changement de fond au survol */
-}
-
 
 .bouton_logoff {
     padding: 8px 16px;
     background-color: #fc6969;
+    border-radius: 4px;
 }
 
 
