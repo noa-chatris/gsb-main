@@ -2,7 +2,7 @@
     session_start();
     include __DIR__ . '/../connect.php';
     if (!isset($_SESSION["idUser"])) {
-        header("Location:  http://127.0.0.1/index.php?erreur=veuillez vous connecter");
+        header("Location: http://127.0.0.1/index.php?erreur=veuillez vous connecter");
         exit();
     }
     else{
