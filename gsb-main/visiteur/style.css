@@ -114,7 +114,7 @@ select, textarea, button {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     font-size: 16px;
     box-sizing: border-box;
@@ -133,7 +133,7 @@ button {
     transition: background 0.3s ease;
 }
 
-button:hover {
+button:hover {  
     background: #2f87e5;
 }
 
