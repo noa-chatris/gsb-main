@@ -26,7 +26,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px;
-    border-bottom: 2px solid #731D55; /* Bordure basse pour séparation */
+    border-bottom: 2px solid #000000; /* Bordure basse pour séparation */
 
     position: -webkit-sticky; /* Safari */
     position: sticky;
@@ -76,7 +76,7 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: white;
+    background-color: rgb(217, 217, 217);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -126,7 +126,7 @@ textarea {
 }
 
 button {
-    background: #F2A30F;
+    background: #0ceb86;
     color: white;
     border: none;
     cursor: pointer;
