@@ -126,6 +126,7 @@ textarea {
 }
 
 button {
+    margin-top: 10px;
     background: #0ceb86;
     color: white;
     border: none;
