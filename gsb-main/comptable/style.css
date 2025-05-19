@@ -129,6 +129,7 @@ textarea {
 }
 
 button {
+    margin-top: 10px;
     background: #45e09a;
     color: white;
     border: none;
