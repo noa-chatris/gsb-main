@@ -3,7 +3,7 @@
     function header_element($acceuil = ".", $saisie_frais = ".", $consultation_frais = ".", $logoff = "..", ){
         $comptable = "";
         if ($_SESSION["idRole"] == 3){
-            $comptable = "<li><a href=\"http://localhost/gsb-main/gsb-main/comptable\">Comptable</a></li>";
+            $comptable = "<li><a href=\"http://127.0.0.1/comptable\">Comptable</a></li>";
         }
         echo "
             <div class=\"header\">

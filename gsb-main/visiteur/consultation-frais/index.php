@@ -2,15 +2,15 @@
 <?php
     session_start();
     if (!isset($_SESSION["idUser"])) {
-        header("Location: http://localhost/gsb-main/gsb-main/index.php?erreur=veuillez vous connecter");
+        header("Location: http://127.0.0.1/index.php?erreur=veuillez vous connecter");
     }
     else{
         if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
             NULL;
         } elseif ($_SESSION["idRole"] == 2) {
-            header("Location: http://localhost/gsb-main/gsb-main/comptable");
+            header("Location: http://127.0.0.1/comptable");
         } else {
-            header("Location: http://localhost/gsb-main/gsb-main/index.php?erreur=connecter vous");
+            header("Location: http://127.0.0.1/index.php?erreur=connecter vous");
         }
     }
 ?>

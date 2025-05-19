@@ -3,15 +3,15 @@
     session_start();
     include __DIR__ . '/../connect.php';
     if (!isset($_SESSION["idUser"])) {
-        header("Location: http://localhost/gsb-main/gsb-main/index.php?erreur=connecter vous");
+        header("Location: http://127.0.0.1/index.php?erreur=connecter vous");
     }
     else{
         if ($_SESSION["idRole"] == 2 || $_SESSION["idRole"] == 3) {
             NULL;
         } elseif ($_SESSION["idRole"] == 1) {
-            header("Location: http://localhost/gsb-main/gsb-main/visiteur");
+            header("Location: http://127.0.0.1/gsb-main/visiteur");
         } else {
-            header("Location: http://localhost/gsb-main/gsb-main/index.php?erreur=connecter vous");
+            header("Location: http://127.0.0.1/index.php?erreur=connecter vous");
         }
     }
 ?>

@@ -5,15 +5,15 @@
     include '../../connect.php';
      
     if (!isset($_SESSION["idUser"])) {
-        header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
+        header("Location: https://127.0.0.1/?erreur=veuillez vous connecter");
     }
     else{
         if ($_SESSION["idRole"] == 2 || $_SESSION["idRole"] == 3) {
             NULL;
         } elseif ($_SESSION["idRole"] == 1) {
-            header("Location: https://gsb.lucas-lestiennes.fr/visiteur");
+            header("Location: https://127.0.0.1/visiteur");
         } else {
-            header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
+            header("Location: https://127.0.0.1/?erreur=veuillez vous connecter");
         }
     }
 ?>
