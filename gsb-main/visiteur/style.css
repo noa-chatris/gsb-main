@@ -21,7 +21,7 @@ body {
 
 
 .navbar {
-    background-color: #F2A30F; /* Couleur de fond plus claire avec texture */
+    background-color: #0ff2b5; /* Couleur de fond plus claire avec texture */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,7 +82,7 @@ body {
 }
 
 h3 {
-    color: #007bff;
+    color: #00e1ff;
     margin-bottom: 10px;
 }
 
