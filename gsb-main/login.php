@@ -57,16 +57,15 @@
                     exit();
                 }
             }
-            echo "
             // On affiche un message d'erreur si le mot de passe ou le login sont incorrects
             // On redirige vers la page de connexion après 10 secondes
-            
+            echo "
             <script>
                 function sleep(ms) {
                     return new Promise(resolve => setTimeout(resolve, ms));
                 }
                 async function relocate() {
-                    await sleep(10000);
+                    await sleep(1000);
                     window.location.href = './index.php ?erreur=Identifiant ou mot de passe incorrect';
                 }
                 relocate();
