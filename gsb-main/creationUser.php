@@ -20,9 +20,22 @@
     </form>
 
     <?php
+        include '../../connect.php';
+        session_start();
+        if (!isset($_SESSION["idUser"])) {
+            header("Location: http://127.0.0.1/?erreur=veuillez vous connecter");
+        }
+        else{
+            if ($_SESSION["idRole"] == 3) {
+                NULL;
+            } elseif ($_SESSION["idRole"] == 2 || $_SESSION["idRole"] == 1) {
+                header("Location: http://127.0.0.1/");
+            } else {
+                header("Location: http://127.0.0.1/?erreur=veuillez vous connecter");
+            }
+        }
         function add()
         {
-            // j'y connecte la base de données
             include './connect.php';
             $username = htmlspecialchars($_POST['username']);
             $password = stripslashes($_POST['password']);

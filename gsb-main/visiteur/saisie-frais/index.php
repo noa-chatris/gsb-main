@@ -19,6 +19,16 @@
             header("Location: http://127.0.0.1/index.php?erreur=connecter vous");
         }
     }
+    $month = date('n');
+    if (isset($_POST["number_ETP"])){
+        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = $_POST[number_ETP] WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month AND idFrais = 'ETP'");
+        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = $_POST[number_KM] WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month AND idFrais = 'KM'");
+        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = $_POST[number_NUI] WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month AND idFrais = 'NUI'");
+        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = $_POST[number_REP] WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month AND idFrais = 'REP'");
+    }
+    if (isset($_POST["new_date"]) && $_POST["new_date"] != ''){
+        $connexion -> exec("INSERT INTO LigneFraisHorsForfait(IdEtat, IdVisiteur, Mois, dateHorsFrais, montant, libelle) VALUES('CR', $_SESSION[idUser], $month, '$_POST[new_date]', '$_POST[new_price]', '$_POST[new_libelle]')");
+    }
 ?>
 <html lang="fr">
     <head>
@@ -32,29 +42,38 @@
     <body>
         <?php include "../include/header.inc.php"; header_element("..", "..", "..", "../..");?>
         <div class="container">
-            <h2>Renseigner une fiche de frais</h2>
-            <form>
-                <label>Date de la dépense</label>
-                <input type="date" required> <br>
-                
-                <label>Montant (€)</label>
-                <input type="number" required> <br>
-                
-                <label>Type de dépense</label>
-                <select>
-                    <option>Hébergement</option>
-                    <option>Transport</option>
-                    <option>Restauration</option>
-                    <option>Autre</option>
-                </select> <br>
-                
-                <label>Justificatif</label>
-                <input type="file" accept=".pdf,.jpg,.png">
+            <h1>Compléter la fiche de frais</h1>
+            <h2>Compléter les Frais compris</h2>
+            <form method="post" action="./">
+                <table>
+                    <?php
+                        $month = date('n');
+                        $res_2 = $connexion -> query("SELECT libelle, quantite, LigneFraisForfait.idFrais FROM LigneFraisForfait INNER JOIN FraisForfais ON FraisForfais.idFrais = LigneFraisForfait.idFrais WHERE Mois = $month AND IdVisiteur = $_SESSION[idUser]; ") -> fetchAll();
+                        foreach ($res_2 as $e){
+                            echo "<tr><td><label for=\"number_$e[2]\">$e[0]</label></td><td><input style=\"margin-left:5px;\" required=\"required\" type=\"number_$e[2]\" id=\"number_$e[2]\" name=\"number_$e[2]\" value=\"$e[1]\"></td></tr>";
+                        }
+                    ?>
+                </table>
                 <br>
-                <label>Commentaire</label>
-                <textarea></textarea>
                 <br>
-                <button type="submit">Soumettre</button>
+                <h2>Compléter les Frais Hors Forfait</h2>
+                <table style="width: 41vw;">
+                    <?php
+                        $month = date('n');
+                        $res_2 = $connexion -> query("SELECT libelle , dateHorsFrais, montant, Id FROM LigneFraisHorsForfait WHERE LigneFraisHorsForfait.Mois = $month AND LigneFraisHorsForfait.IdVisiteur = $_SESSION[idUser];") -> fetchAll();
+                        echo "<form method='post' action='deleteFiche.php'><input type='hidden' name='None' value='0'><input id='invisible' type='submit' value=''></form>";
+                        foreach ($res_2 as $e){
+                            echo "<tr>
+                                    <td>$e[libelle]</td>
+                                    <td>$e[dateHorsFrais]</td>
+                                    <td>$e[montant]</td>
+                                    <td><form method='post' action='deleteFiche.php'><input type='hidden' name='Id' value='".$e["Id"]."'><input type='submit' value='supprimer'></form></td>
+                                </tr>";
+                        }
+                    ?>
+                    <tr><td><input placeholder="entrer le libelle" name="new_libelle"/></td><td>Sélectionner la date:<input type="date" name="new_date"></td><td>Montant:<input type="number" name="new_price"></td></tr>
+                </table>
+                <input type="submit" value="Soumettre"/>
             </form>
         </div>
     </body>
