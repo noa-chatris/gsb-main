@@ -148,3 +148,7 @@ button:nth-of-type(2) {
 button:nth-of-type(2):hover {
     background: #00ff8c;
 }
+
+#invisible {
+    display: none;
+}
