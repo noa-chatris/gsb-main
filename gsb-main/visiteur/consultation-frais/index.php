@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+    include '../../connect.php';
     session_start();
     if (!isset($_SESSION["idUser"])) {
         header("Location: http://127.0.0.1/index.php?erreur=veuillez vous connecter");
