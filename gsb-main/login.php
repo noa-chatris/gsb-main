@@ -66,7 +66,7 @@
                 }
                 async function relocate() {
                     await sleep(1000);
-                    window.location.href = './index.php ?erreur=Identifiant ou mot de passe incorrect';
+                    window.location.href = './index.php/?erreur=Identifiant ou mot de passe incorrect';
                 }
                 relocate();
             </script>
