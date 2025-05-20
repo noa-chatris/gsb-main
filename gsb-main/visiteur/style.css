@@ -13,7 +13,7 @@ body {
 }
 
 .header {
-    background-color: #78b6f7;
+    background-color: #3e91eb;
     color: rgb(239, 171, 45);
     padding: 20px 0;
     text-align: center;
@@ -21,7 +21,7 @@ body {
 
 
 .navbar {
-    background-color: #6cf1f3; /* Couleur de fond plus claire avec texture */
+    background-color: #4bf4f7; /* Couleur de fond plus claire avec texture */
     display: flex;
     justify-content: space-between;
     align-items: center;
