@@ -38,12 +38,8 @@
                     $_SESSION["idRole"] = NULL;
                     $_SESSION["idUser"] = NULL;
                     error_reporting(E_ERROR | E_PARSE);
-                    try{
-                        if ($_GET["erreur"]){
+                        if (isset($_GET["erreur"])){
                             echo "<p>$_GET[erreur]</p>";
-                        }
-                        }catch(Error){
-                            NULL;
                         }
                 ?>
             </form>
