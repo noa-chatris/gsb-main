@@ -3,15 +3,15 @@
     include __DIR__ . '/../../connect.php';
     session_start();
     if (!isset($_SESSION["idUser"])) {
-        header("Location: http://127.0.0.1/index.php?erreur=connecter vous");
+        header("Location: http://GestionFrais.5.gsb/index.php?erreur=connecter vous");
     }
     else{
         if ($_SESSION["idRole"] == 2 || $_SESSION["idRole"] == 3) {
             NULL;
         } elseif ($_SESSION["idRole"] == 1) {
-            header("Location: http://127.0.0.1/visiteur");
+            header("Location: http://GestionFrais.5.gsb/visiteur");
         } else {
-            header("Location: http://127.0.0.1/index.php?erreur=connecter vous");
+            header("Location: http://GestionFrais.5.gsb/index.php?erreur=connecter vous");
         }
     }
 ?>

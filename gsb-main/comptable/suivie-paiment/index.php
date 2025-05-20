@@ -5,15 +5,15 @@
     include '../../connect.php';
      
     if (!isset($_SESSION["idUser"])) {
-        header("Location: https://127.0.0.1/?erreur=veuillez vous connecter");
+        header("Location: https://GestionFrais.5.gsb/?erreur=veuillez vous connecter");
     }
     else{
         if ($_SESSION["idRole"] == 2 || $_SESSION["idRole"] == 3) {
             NULL;
         } elseif ($_SESSION["idRole"] == 1) {
-            header("Location: https://127.0.0.1/visiteur");
+            header("Location: https://GestionFrais.5.gsb/visiteur");
         } else {
-            header("Location: https://127.0.0.1/?erreur=veuillez vous connecter");
+            header("Location: https://GestionFrais.5.gsb/?erreur=veuillez vous connecter");
         }
     }
 ?>

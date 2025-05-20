@@ -2,16 +2,16 @@
     session_start();
     include __DIR__ . '/../connect.php';
     if (!isset($_SESSION["idUser"])) {
-        header("Location: http://127.0.0.1/index.php?erreur=veuillez vous connecter");
+        header("Location: http://GestionFrais.5.gsb/index.php?erreur=veuillez vous connecter");
         exit();
     }
     else{
         if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
             NULL;
         } elseif ($_SESSION["idRole"] == 2) {
-            header("Location: http://127.0.0.1/comptable");
+            header("Location: http://GestionFrais.5.gsb/comptable");
         } else {
-        header("Location: http://127.0.0.1/index.php?erreur=veuiller vous connecter");
+        header("Location: http://GestionFrais.5.gsb/index.php?erreur=veuiller vous connecter");
         }
     }
 ?>  

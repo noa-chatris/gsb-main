@@ -39,20 +39,20 @@
                 if ($res["idRole"] == 2){
                     $_SESSION["idRole"]= 2;
                     $_SESSION["idUser"]= $res["IdVisiteur"];
-                    header("Location: http://127.0.0.1/comptable/index.php");
+                    header("Location: http://GestionFrais.5.gsb/comptable/index.php");
                     exit();
                 }
                 if ($res["idRole"] == 1){
                     $_SESSION["idRole"]= 1;
                     $_SESSION["idUser"]= $res["IdVisiteur"];
-                    header("Location: http://127.0.0.1/visiteur/index.php");
+                    header("Location: http://GestionFrais.5.gsb/visiteur/index.php");
                     close($connexion,$res["IdVisiteur"]);
                     exit();
                 }
                 if ($res["idRole"] == 3){
                     $_SESSION["idRole"]= 3;
                     $_SESSION["idUser"]= $res["IdVisiteur"];
-                    header("Location: http://127.0.0.1/comptable/index.php");
+                    header("Location: http://GestionFrais.5.gsb/comptable/index.php");
                     close($connexion,$res["IdVisiteur"]);
                     exit();
                 }

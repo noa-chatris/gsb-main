@@ -23,15 +23,15 @@
         include '../../connect.php';
         session_start();
         if (!isset($_SESSION["idUser"])) {
-            header("Location: http://127.0.0.1/?erreur=veuillez vous connecter");
+            header("Location: http://GestionFrais.5.gsb/?erreur=veuillez vous connecter");
         }
         else{
             if ($_SESSION["idRole"] == 3) {
                 NULL;
             } elseif ($_SESSION["idRole"] == 2 || $_SESSION["idRole"] == 1) {
-                header("Location: http://127.0.0.1/");
+                header("Location: http://GestionFrais.5.gsb/");
             } else {
-                header("Location: http://127.0.0.1/?erreur=veuillez vous connecter");
+                header("Location: http://GestionFrais.5.gsb/?erreur=veuillez vous connecter");
             }
         }
         function add()

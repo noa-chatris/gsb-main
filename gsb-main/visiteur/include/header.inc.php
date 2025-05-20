@@ -6,7 +6,7 @@
     function header_element($acceuil = ".", $saisie_frais = ".", $consultation_frais = ".", $logoff = "..", ){
         $comptable = "";
         if ($_SESSION["idRole"] == 3){
-            $comptable = "<li><a href=\"http://127.0.0.1/comptable\">Comptable</a></li>";
+            $comptable = "<li><a href=\"http://GestionFrais.5.gsb/comptable\">Comptable</a></li>";
         }
         echo "
             <div class=\"header\">
